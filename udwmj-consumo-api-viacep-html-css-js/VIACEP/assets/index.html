@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumo de Api - ViaCep</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    /* só para garantir o funcionamento */
+    .hidden {
+      display: none;
+    }
+    .message-box.error {
+      color: red;
+      font-weight: bold;
+    }
+    .result-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Buscador de CEP</h1>
+
+    <div class="input-group">
+      <input type="text" id="cepInput" placeholder="Digite o CEP: (apenas números)" maxlength="8">
+      <button id="searchButton" type="button">Buscar</button>
+    </div>
+
+    <!-- Mensagens de erro/sucesso -->
+    <div id="message" class="message-box hidden"></div>
+
+    <!-- Quadrado de resultados (sempre visível, mas vazio no início) -->
+    <div id="result" class="result-box">
+      <p><strong>CEP:</strong> <span id="cepResult"></span></p>
+      <p><strong>LOGRADOURO:</strong> <span id="logradouroResult"></span></p>
+      <p><strong>BAIRRO:</strong> <span id="bairroResult"></span></p>
+      <p><strong>CIDADE:</strong> <span id="localidadeResult"></span></p>
+      <p><strong>ESTADO:</strong> <span id="ufResult"></span></p>
+      <p><strong>COMPLEMENTO:</strong> <span id="complementoResult"></span></p>
+    </div>
+  </div>
+
+  <!-- seu JS -->
+  <script src="/VIACEP/assets/js/script.js"></script>
+</body>
+</html>
